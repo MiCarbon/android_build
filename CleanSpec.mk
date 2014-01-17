@@ -205,8 +205,15 @@ $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/build.prop)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/*)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/obj/APPS/*)
 
+
 #Fix incremental builds by adding a CleanSpec step
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/obj/EXECUTABLES/wpa_supplicant_intermediates/*)
+
+# 4.4.1
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/build.prop)
+
+# 4.4.2
+$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/build.prop)
 
 # ************************************************
 # NEWER CLEAN STEPS MUST BE AT THE END OF THE LIST
